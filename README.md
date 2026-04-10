@@ -48,7 +48,6 @@
 
 ## 📸 软件预览
 
-*(建议在此处上传一张你的软件运行截图，能极大增加项目的吸引力！)*
 <img width="1905" height="1111" alt="image" src="https://github.com/user-attachments/assets/10685bf6-c34f-4039-86a3-46017c0f52a2" />
 
 ---
