@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TextClear (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TextClear (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
