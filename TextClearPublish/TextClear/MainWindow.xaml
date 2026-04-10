@@ -37,7 +37,7 @@
                     </Grid.RowDefinitions>
 
                     <Border Grid.Row="0" Background="{ThemeResource LayerFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="12" Padding="2">
-                        <TextBox x:Name="InputTextArea" PlaceholderText="在此粘贴带格式的内容..." AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0" FontSize="16" Padding="16" Background="Transparent"/>
+                        <TextBox x:Name="InputTextArea" PlaceholderText="在此粘贴带格式或HTML代码的内容..." AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0" FontSize="16" Padding="16" Background="Transparent"/>
                     </Border>
 
                     <StackPanel Grid.Row="1" Margin="0,20,0,0">
@@ -48,6 +48,8 @@
                             </Grid.ColumnDefinitions>
 
                             <StackPanel Orientation="Horizontal" Spacing="20">
+                                <ToggleSwitch x:Name="DeepPurifyToggle" Header="深度净化 (杀掉HTML/杂质)" IsOn="False" FontSize="12" Foreground="{ThemeResource SystemAccentColor}" Toggled="DeepPurifyToggle_Toggled"/>
+
                                 <ToggleSwitch x:Name="TrimSpacesToggle" Header="自动去首尾空格" IsOn="True" FontSize="12"/>
                                 <ToggleSwitch x:Name="RemoveEmptyLinesToggle" Header="合并多余空行" IsOn="False" FontSize="12"/>
                             </StackPanel>
@@ -60,7 +62,7 @@
                             </Button>
                         </Grid>
 
-                        <InfoBar x:Name="ResultInfoBar" Title="净化完成" Message="已成功复制到剪贴板" IsOpen="False" Severity="Success" Margin="0,12,0,0" />
+                        <InfoBar x:Name="ResultInfoBar" Title="净化完成" Message="已成功还原为纯净文本并复制" IsOpen="False" Severity="Success" Margin="0,12,0,0" />
                     </StackPanel>
                 </Grid>
             </NavigationView>
